@@ -1,0 +1,22 @@
+<br>
+<br>
+<div class="USE">
+  <form [formGroup]="form2" (ngSubmit)="Clickme()">
+    <div class="USE">
+      <label for="COUNTRY"required >COUNTRY : </label>
+      <select formControlName="COUNTRY"><option class="OPA">select you country</option>
+        <option *ngFor="let item of fetch ">{{item.COUNTRY}}</option>
+      </select>
+      <small *ngIf="form2.get('COUNTRY').errors?.['required'] && form2.get('COUNTRY').touched"> Country is Required...</small>
+    </div>
+    <div class="box">
+      <label>STATE : </label>
+      <input type="text" class="STATE" placeholder="Please Enter You State..." formControlName="STATENAME" required=""><br>
+      <small *ngIf="form2.get('STATENAME').errors?.['required'] && form2.get('STATENAME').touched">State is Required.....</small>
+      <button class="SUBMIT">SUBMIT</button>
+    </div>
+  </form>
+
+</div>
+ 
+<router-outlet></router-outlet>

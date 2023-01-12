@@ -1,0 +1,127 @@
+<!-- <div class="container">
+    <div class="row">
+        <div class="country"><h3>COUNTRY NAMES</h3>
+            <div  *ngFor="let list of fetch ">=>{{list.COUNTRY}}</div> 
+        </div>
+
+        <div class="state"><h3> STATE NAMES</h3>
+            <div *ngFor="let item of fetch ">
+                <div *ngFor="let list of item.STATE">=>{{list.STATENAME}}</div>
+            </div>
+        </div>
+
+        <div class="district"><h3>DISTRICT NAMES</h3>
+            <div *ngFor="let item of fetch ">
+                <div *ngFor="let list of item.STATE">
+                    <div *ngFor="let list of list.DISTRICT">=>{{list.DISTRICTNAME}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+
+
+<!-- <div class="row">
+    <table class="table">
+    <tr>
+        <th>
+            COUNTRY
+        </th>
+        <br>
+        <th>
+            STATE
+        </th>
+        <br>
+        <br>
+        <br>
+        <th>
+            DISTRICT
+        </th>
+    </tr>
+            <tr>
+                <td >
+                    <div *ngFor="let list of fetch ">{{list.COUNTRY}}</div>
+                </td>
+                <td>
+                    <div *ngFor="let item of fetch ">
+                        <div *ngFor="let list of item.STATE">{{list.STATENAME}}</div>
+                    </div>
+                    
+                </td>
+                <td>
+                    <div *ngFor="let item of fetch ">
+                        <div *ngFor="let list of item.STATE">
+                            <div *ngFor="let list of list.DISTRICT">{{list.DISTRICTNAME}}</div>
+                        </div>
+                    </div>
+                </td>
+                
+            </tr>
+    
+    </table>
+</div>
+
+<tr><th>Country</th><br><th>State</th><br><th>District</th></tr>   -->
+
+
+
+
+<!-- <body>  
+  <table>  
+        <tr>  
+            <th><h1>Country</h1></th>  
+            <th><h1>State</h1></th>  
+            <th><h1>District</h1></th>  
+        </tr>  
+        <tr>  
+            <td>1
+                <div *ngFor="let list of fetch ">{{list.COUNTRY}}</div>
+            </td>  
+            <td>1
+                <div *ngFor="let item of fetch ">
+                    <div *ngFor="let list of item.STATE">{{list.STATENAME}}</div>
+                </div>
+            </td>  
+            <td>1
+                <div *ngFor="let item of fetch ">
+                    <div *ngFor="let list of item.STATE">
+                        <div *ngFor="let list of list.DISTRICT">{{list.DISTRICTNAME}}</div>
+                    </div>
+                </div>
+            </td>  
+        </tr> 
+
+        <tr>  
+            <td>2
+                <div *ngFor="let list of fetch ">{{list.COUNTRY}}</div>
+            </td>  
+            <td>2
+                <div *ngFor="let item of fetch ">
+                    <div *ngFor="let list of item.STATE">{{list.STATENAME}}</div>
+                </div>
+            </td>  
+            <td>2
+                <div *ngFor="let item of fetch ">
+                    <div *ngFor="let list of item.STATE">
+                        <div *ngFor="let list of list.DISTRICT">{{list.DISTRICTNAME}}</div>
+                    </div>
+                </div>
+            </td>  
+        </tr>
+    </table>  
+</body>  -->
+
+<div class="preview">
+    <h4><div class="country" *ngFor="let item of fetch ">=>{{ item.COUNTRY }}
+        <div class="State" *ngFor="let list of item.STATE"><li>{{list.STATENAME}}</li>
+            <div class="district" *ngFor="let lists of list.DISTRICT"><li>{{lists.DISTRICTNAME}}</li></div>
+        </div>
+    </div></h4>
+</div>
+
+
+
+
+
+

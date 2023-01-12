@@ -1,0 +1,14 @@
+<div class="box" >
+  <form [formGroup]="form1" (ngSubmit)="Clickme()" class="USE">
+    <label>COUNTRY : </label>
+    <input type="text" class="COUNTRY" placeholder="Please Enter You Country..." formControlName="COUNTRY" required>
+    <small *ngIf="form1.get('COUNTRY').errors?.['required'] && form1.get('COUNTRY').touched">Country is Required...</small>
+    <button class="SUBMIT" >SUBMIT</button>
+  </form>
+
+</div>
+
+
+
+
+<router-outlet></router-outlet>

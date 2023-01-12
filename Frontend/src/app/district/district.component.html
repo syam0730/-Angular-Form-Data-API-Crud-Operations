@@ -1,0 +1,36 @@
+<br>
+<br>
+<form [formGroup]="form3" (ngSubmit)="Clickme()">
+  <div class="USE">
+    <label for="COUNTRY"required >COUNTRY : </label>
+    <select formControlName="COUNTRY" (change)="onSelect($event)"><option class="OPA">select you country</option>
+      <option *ngFor="let item of fetch ">{{item.COUNTRY}}</option>
+    </select> <br>
+    <small *ngIf="form3.get('COUNTRY').errors?.['required'] && form3.get('COUNTRY').touched">count is Required...</small>
+  </div>
+  <br>
+  <br>
+  <div class="USE">
+      <label for="STATENAME"required >STATE : </label>
+      <select formControlName="STATENAME" (change)="getStateName()"><option class="OPA">select you state</option>
+      <option *ngFor="let item of dropdownstate">
+          {{item}}
+      </option>
+      </select> <br>
+      <small *ngIf="form3.get('STATENAME').errors?.['required'] && form3.get('STATENAME').touched">State is Required...</small>
+  </div>
+  <br>
+  <br>
+  <div class="box">
+      <label>DISTRICT : </label>
+      <input type="text" class="DISTRICT" placeholder="Please Enter You district..." formControlName="DISTRICTNAME"  required=""><br>
+      <small *ngIf="form3.get('DISTRICTNAME').errors?.['required'] && form3.get('DISTRICTNAME').touched">District is Required...</small>
+      <button class="SUBMIT">SUBMIT</button>
+  </div>
+  
+    
+
+
+</form>
+
+  <router-outlet></router-outlet>
